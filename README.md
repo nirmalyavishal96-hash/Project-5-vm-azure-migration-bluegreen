@@ -157,7 +157,7 @@ Swap → Zero Downtime Deployment
 
 ## 📸 Screenshots
 
-Include the following:
+Attached:
 
 1. Docker Container Running
 2. VM Server Deployment
