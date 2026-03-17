@@ -159,13 +159,13 @@ Swap → Zero Downtime Deployment
 
 Include the following:
 
-1. Local App Running
-2. Docker Container Running
-3. VM Server Deployment
-4. Azure App Service
-5. Deployment Slots (Blue & Green)
-6. Staging URL (New Version)
-7. Slot Swap (Before & After)
+1. Docker Container Running
+2. VM Server Deployment
+3. Azure App Service
+4. Deployment Slots (Blue & Green)
+5. Deployment URL (Version-1)
+6. Staging URL (Version-2)
+7. Slot Swap Deployment URL (Version-2)
 
 ---
 
