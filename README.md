@@ -1,18 +1,32 @@
-# 🚀 Azure Cloud Migration with Blue-Green Deployment
+# Production-Ready Azure VM Migration with Blue-Green Deployment Strategy
+---
+## 📌 Problem Statement
 
-## 📌 Project Overview
+Modern applications require continuous deployment with minimal downtime, but traditional deployment methods often lead to:
 
-This project demonstrates a **real-world DevOps workflow** by migrating a containerized application from an **on-premise server (Virtual Machine)** to **Azure Cloud**, and implementing **Blue-Green Deployment** using Azure App Service deployment slots.
+- Service interruptions during updates  
+- Increased risk of deployment failures  
+- Difficulty in rolling back faulty releases  
+- Lack of separation between staging and production environments  
 
+These challenges make it difficult to ensure reliable and seamless application delivery.
 ---
 
-## 🎯 Objectives
+## Solution
 
-* Simulate an **on-prem server using VirtualBox**
-* Containerize application using **Docker**
-* Perform **cloud migration to Azure App Service**
-* Implement **zero-downtime deployment (Blue-Green strategy)**
-* Showcase **end-to-end DevOps pipeline**
+This project implements a **Blue-Green deployment strategy on Azure App Service** to achieve zero-downtime releases.
+
+- Migrated a containerized application from an on-premise virtual machine to Azure Cloud  
+- Used Azure App Service deployment slots (Blue = Production, Green = Staging)  
+- Deployed new versions to the staging environment before switching traffic  
+- Performed instant traffic swap to release updates without downtime  
+- Enabled quick rollback by reversing slot swap in case of failure  
+---
+
+## Impact 
+- Achieved zero-downtime deployment using Blue-Green strategy  
+- Reduced deployment risk by enabling instant rollback via slot swap  
+- Improved release reliability by separating staging and production environments
 
 ---
 
@@ -155,6 +169,21 @@ Swap → Zero Downtime Deployment
 
 ---
 
+## 🔁 Reliability & Rollback Strategy
+
+- Deployment is first tested in staging slot (Green)  
+- Production traffic is switched only after validation  
+- In case of failure, instant rollback is achieved by swapping slots back  
+- Ensures zero downtime and minimal user impact
+
+---
+
+## 🌍 Real-World Use Case
+
+This project simulates enterprise deployment strategies where applications must be updated without downtime, ensuring continuous availability for users.
+
+---
+
 ## 📸 Screenshots
 
 Attached:
@@ -239,18 +268,11 @@ az group delete --name devops-rg --yes --no-wait
 
 ---
 
-## 🏆 Key Achievements
-
-* Simulated real **on-prem to cloud migration**
-* Implemented **Blue-Green deployment**
-* Achieved **zero downtime release**
-* Used **Azure production-grade services**
-
----
-
 
 ## 👨‍💻 Author
 
 **Nirmalya Das**
+
+DevOps Engineer | Cloud | Automation
 
 ---
