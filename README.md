@@ -1,4 +1,5 @@
 # Production-Ready Azure VM Migration with Blue-Green Deployment Strategy
+Zero-downtime deployment on Azure using Blue-Green strategy with instant rollback via deployment slots
 
 ## 📌 Problem Statement
 
@@ -13,7 +14,7 @@ These challenges make it difficult to ensure reliable and seamless application d
 
 ---
 
-## Solution
+## 💡 Solution
 
 This project implements a **Blue-Green deployment strategy on Azure App Service** to achieve zero-downtime releases.
 
@@ -21,10 +22,11 @@ This project implements a **Blue-Green deployment strategy on Azure App Service*
 - Used Azure App Service deployment slots (Blue = Production, Green = Staging)  
 - Deployed new versions to the staging environment before switching traffic  
 - Performed instant traffic swap to release updates without downtime  
-- Enabled quick rollback by reversing slot swap in case of failure  
+- Enabled instant rollback using slot swap without service interruption
+- Reduced release downtime to near zero using slot-based traffic switching  
 ---
 
-## Impact 
+## 📈 Impact 
 - Achieved zero-downtime deployment using Blue-Green strategy  
 - Reduced deployment risk by enabling instant rollback via slot swap  
 - Improved release reliability by separating staging and production environments
@@ -50,7 +52,7 @@ Docker Container (Flask App)
 ```
 User
   ↓
-Azure App Service
+Azure App Service (Traffic Router)
   ↓
  ├── Production Slot (Blue)
  └── Staging Slot (Green)
