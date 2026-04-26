@@ -1,5 +1,5 @@
 # Production-Ready Azure VM Migration with Blue-Green Deployment Strategy
----
+
 ## 📌 Problem Statement
 
 Modern applications require continuous deployment with minimal downtime, but traditional deployment methods often lead to:
@@ -10,6 +10,7 @@ Modern applications require continuous deployment with minimal downtime, but tra
 - Lack of separation between staging and production environments  
 
 These challenges make it difficult to ensure reliable and seamless application delivery.
+
 ---
 
 ## Solution
